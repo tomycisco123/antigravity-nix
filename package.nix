@@ -87,7 +87,6 @@ let
       libuuid
       libxkbcommon
       mesa
-      mesa.drivers
       nspr
       nss
       pango

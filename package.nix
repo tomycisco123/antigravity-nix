@@ -81,16 +81,19 @@ let
       glib
       gtk3
       libdrm
+      libglvnd
       libnotify
       libsecret
       libuuid
       libxkbcommon
       mesa
+      mesa.drivers
       nspr
       nss
       pango
       stdenv.cc.cc.lib
       systemd
+      vulkan-loader
       xorg.libX11
       xorg.libXScrnSaver
       xorg.libXcomposite

@@ -40,6 +40,15 @@ let
     sha256 = "sha256-0bERWudsJ1w3bqZg4eTS3CDrPnLWogawllBblEpfZLc=";
   };
 
+  # Create a Chrome wrapper that uses the user's existing profile
+  chrome-wrapper = writeShellScript "google-chrome-with-profile" ''
+    # Force Chrome to use user's existing profile where extension is installed
+    exec /run/current-system/sw/bin/google-chrome-stable \
+      --user-data-dir="$HOME/.config/google-chrome" \
+      --profile-directory=Default \
+      "$@"
+  '';
+
   # Extract and prepare the antigravity binary
   antigravity-unwrapped = stdenv.mkDerivation {
     inherit pname version src;
@@ -114,17 +123,10 @@ let
     ]);
 
     runScript = writeShellScript "antigravity-wrapper" ''
-      # Set Chrome paths for browser automation support
-      # Use system-wide Chrome which is accessible inside FHS via /run bind mount
-      export CHROME_BIN=/run/current-system/sw/bin/google-chrome-stable
-      export CHROME_PATH=/run/current-system/sw/bin/google-chrome-stable
-
-      # Use existing Chrome profile instead of creating temporary one
-      # This preserves extensions, settings, and login state
-      export CHROME_USER_DATA_DIR="$HOME/.config/google-chrome"
-
-      # Additional Chrome flags to use the default profile
-      export CHROME_FLAGS="--profile-directory=Default"
+      # Set Chrome paths to use our wrapper that forces user profile
+      # This ensures extensions installed in user's Chrome profile are available
+      export CHROME_BIN=${chrome-wrapper}
+      export CHROME_PATH=${chrome-wrapper}
 
       exec ${antigravity-unwrapped}/lib/antigravity/antigravity "$@"
     '';

@@ -14,6 +14,7 @@
 , dbus
 , expat
 , glib
+, google-chrome
 , gtk3
 , libdrm
 , libgbm
@@ -80,6 +81,7 @@ let
       dbus
       expat
       glib
+      google-chrome
       gtk3
       libdrm
       libgbm
@@ -112,6 +114,10 @@ let
     ]);
 
     runScript = writeShellScript "antigravity-wrapper" ''
+      # Set Chrome paths for browser automation support
+      export CHROME_BIN=${google-chrome}/bin/google-chrome-stable
+      export CHROME_PATH=${google-chrome}/bin/google-chrome-stable
+
       exec ${antigravity-unwrapped}/lib/antigravity/antigravity "$@"
     '';
 

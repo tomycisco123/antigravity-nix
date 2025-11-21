@@ -174,6 +174,9 @@ let
     ];
   };
 
+  # Icon file
+  iconFile = ./icons/antigravity.png;
+
 in
 stdenv.mkDerivation {
   inherit pname version;
@@ -191,11 +194,10 @@ stdenv.mkDerivation {
     mkdir -p $out/bin
     ln -s ${fhs}/bin/antigravity-fhs $out/bin/antigravity
 
-    # Install icon if available
-    if [ -f ${antigravity-unwrapped}/lib/antigravity/resources/app/icon.png ]; then
-      mkdir -p $out/share/pixmaps
-      cp ${antigravity-unwrapped}/lib/antigravity/resources/app/icon.png $out/share/pixmaps/antigravity.png
-    fi
+    # Install icon from local icons directory
+    mkdir -p $out/share/pixmaps $out/share/icons/hicolor/512x512/apps
+    cp ${iconFile} $out/share/pixmaps/antigravity.png
+    cp ${iconFile} $out/share/icons/hicolor/512x512/apps/antigravity.png
 
     runHook postInstall
   '';

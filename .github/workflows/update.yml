@@ -51,13 +51,15 @@ jobs:
         run: |
           chmod +x scripts/update-version.sh
 
-          # Capture output
-          if ./scripts/update-version.sh > update_output.txt 2>&1; then
+          # Capture output and show it for debugging
+          if ./scripts/update-version.sh 2>&1 | tee update_output.txt; then
             echo "update_success=true" >> $GITHUB_OUTPUT
 
             # Extract new version if updated
             if grep -q "Update complete" update_output.txt; then
-              NEW_VERSION=$(grep "version = " flake.nix | head -1 | grep -oP '"\K[^"]+')
+              # Extract version carefully - only the semver-build pattern
+              NEW_VERSION=$(grep -oP 'version = "\K[0-9]+\.[0-9]+\.[0-9]+-[0-9]+' flake.nix | head -1)
+              echo "Detected new version: $NEW_VERSION"
               echo "new_version=$NEW_VERSION" >> $GITHUB_OUTPUT
               echo "has_changes=true" >> $GITHUB_OUTPUT
             else
@@ -65,6 +67,7 @@ jobs:
             fi
           else
             echo "update_success=false" >> $GITHUB_OUTPUT
+            echo "=== Update script failed ==="
             cat update_output.txt
             exit 1
           fi

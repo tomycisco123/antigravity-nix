@@ -144,6 +144,7 @@ let
         xorg.libXtst
         xorg.libxcb
         xorg.libxshmfence
+        xorg.libxkbfile
         zlib
       ]) ++ lib.optional (browserPkg != null) browserPkg;
 

